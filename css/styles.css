@@ -39,7 +39,7 @@ body {
 }
 
 #hero-banner {
-    height : 100%;
+    height : 100vh;
     background-color: #fff;
     color: rgb(35, 11, 100);
     display: flex;
