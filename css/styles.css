@@ -10,7 +10,7 @@ body {
 /* Entête (header) */
 #header {
     background-color: #fff;
-    color: rgb(5, 10, 50);
+    color: rgb(0, 0, 0);
     padding: 10px 0;
 }
 
@@ -19,16 +19,16 @@ body {
 }
 
 #main-nav .navbar-nav li a {
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
     font-weight: bold;
 }
 
 #main-nav .navbar-nav li a:hover {
-    background-color: #555;
+    background-color: #1c5ca0;
 }
 
 #main-nav .active a {
-    background-color: #007BFF;
+    background-color: #0d4684;
 }
 
 #main-nav .navbar-toggle {
@@ -36,8 +36,9 @@ body {
 }
 
 #hero-banner {
-    background-color: #007BFF;
-    color: white;
+    height: 100vh;
+    background-color: #fff;
+    color: rgb(35, 11, 100);
     padding: 80px 0;
     text-align: center;
 }
@@ -56,6 +57,7 @@ body {
 /* Section "Introduction" */
 #Introduction {
     padding: 60px 0;
+    height: 100vh;
     background-color: white;
 }
 
@@ -94,6 +96,7 @@ body {
 
 /* Section "Research Question : " */
 #RQ {
+    height: 100vh;
     padding: 60px 0;
     background-color: white;
 }
@@ -116,6 +119,7 @@ body {
 
 /* Section "Data Story : " */
 #data-story {
+    height: 100vh;
     padding: 60px 0;
     background-color: white;
 }
