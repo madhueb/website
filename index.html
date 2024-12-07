@@ -132,7 +132,53 @@
             <div class="row wow fadeInUp">
                 <div class="col-md-12">
                     <h3 class="subsection-title">User Navigation Pattern</h3>
-                    <p>2nd part: User navigation pattern</p>
+                    <p>In our analysis of the Wikispeedia dataset, we previously identified key "hubs" in the network. These hubs often correspond to culturally significant anchor points, reflecting the structure of modern knowledge. However, the prominence of an article as a hub does not necessarily indicate its alignment with areas of widely shared knowledge. Instead, to better understand the common knowledge shared among users, we must delve into the paths players take during their games.
+
+
+                        Do Players Exhibit Similar Navigation Behavior?
+                        To identify shared knowledge, it is essential to determine whether players demonstrate consistent behaviors when faced with the same game setup (i.e., starting and target articles). If players tend to follow similar trajectories, this suggests an underlying consensus or shared understanding of how knowledge is structured within Wikipedia.
+                        To investigate this, we analyze how different players approach the same game (with the same starting point and target) and assess the degree of similarity in the path they take to navigate. 
+                        
+                        One way to do so is to look at the distance between paths taken by players for a given game.
+                        There are multiple ways to quantify the "distance" between paths : the Jacquard distance, shortest paths distance or a semantic distance. Each metric provides a particular perspective on the nature of the similarity. 
+                        
+                        Here as an example, we display the results for finished paths of the game starting at « Calculus » and reaching « Paul Mc Cartney », using a semantic distance based on BERT embeddings. 
+                        
+                        FIGURE 
+                        
+                        As shown in the graph, the paths are semantically close to one another, indicating that users exhibit similar navigation behaviors.
+                        
+                        Having established that users tend to follow similar patterns, we can further explore their navigation habits: which articles do they visit most frequently? Which categories do they explore? What links do they click on? Since players typically choose articles they are familiar with or have knowledge about in order to reach their target, analyzing these choices will provide valuable insights into shared knowledge. 
+                        
+                        What do the players paths teach us about common knowledge ? 
+                        
+                        From all the players paths in the data (finished and unfinished paths) we can have access to the top 10 most visited articles , top 10 most clicked on links and show how frequently are each category visited. 
+                        
+                        #Analysis 
+                        
+                        An other interesting indicator is to look  
+                        
+                        #Figures : top 10 articles , categories , links
+                        
+                        Links of length 3 (?)
+                        
+                        
+                        #Analysis
+                        
+                        #Figure sucess rate by category of the target / the start point (heatmap) ? 
+                        → show where people have trouble 
+                        
+                        However looking at unfinished paths in abandoned games can also be very meaningful in order to understand lack of knowledge. One very interesting aspect is to look at where did the user stopped and how close he was from the target. We show in the following plots how close users were from the target in terms of a semantic distance and in terms of number pof clics away.
+                        
+                        Some of these unfinished games stop very close to the target (one clic away or really semantically close), we could consider that these games stop because players considered they had reach the target. However some of these games which are still pretty close to the end (two or three clics away) and still not so semantically close : they are evidence of some lack of knowledge : people may not be aware what their stop point and their target point have in common. 
+                        
+                        One example : The target to reach is Milk and the person stopped at Louis Pasteur which is only two clicks away : by passing by : Louis Pasteur → pasteurization → milk
+                        It indicates that this person might not be aware of what pasteurization is and that it does concern milk. 
+                        
+                        # Figure most common lack of knowledge in association
+                        
+                        We can also show where people tend to have 
+                        </p>
                 </div>
             </div>
     
