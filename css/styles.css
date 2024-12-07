@@ -25,10 +25,12 @@ body {
 
 #main-nav .navbar-nav li a:hover {
     background-color: #1c5ca0;
+    color: #fff !important;
 }
 
 #main-nav .active a {
     background-color: #0d4684;
+    color: #fff !important;
 }
 
 #main-nav .navbar-toggle {
@@ -145,11 +147,10 @@ body {
 
 /* Sous-sections */
 .subsection {
+    height: 100vh;
+    padding: 60px 0;
+    background-color: white;
     margin-bottom: 40px;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Titres des sous-sections */
@@ -211,32 +212,26 @@ body {
 
 /* Section "Team" */
 #team {
-    height: 100vh;
-    background-color: #fff;
     padding: 60px 0;
+    height: 100vh;
+    background-color: white;
 }
-
-#team .team-member {
+.section-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-#team .team-member img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.section-header .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-#team .team-member h4 {
-    font-size: 22px;
-    margin-top: 10px;
+.section-header p {
+    font-size: 18px;
+    color: #555;
 }
 
-#team .team-member p {
-    font-size: 16px;
-    color: #777;
-}
 
 /* Footer */
 footer {
