@@ -10,7 +10,7 @@ body {
 /* Entête (header) */
 #header {
     background-color: #fff;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 253, 253);
     padding: 10px 0;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 #main-nav .navbar-nav li a {
-    color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
     font-weight: bold;
 }
 
@@ -39,8 +39,11 @@ body {
     height: 100vh;
     background-color: #fff;
     color: rgb(35, 11, 100);
-    padding: 80px 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;   /* Centrer horizontalement */
+    align-items: center;       /* Centrer verticalement */
+    text-align: center;        /* Centrer le texte à l'intérieur de l'élément */
+    padding: 0;                /* Annuler les padding pour le centre */
 }
 
 #hero-banner h2 {
