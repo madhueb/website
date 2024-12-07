@@ -58,7 +58,7 @@ text-align:center;
 }
 .section-header .section-title {
   font-size: 44px;
-  color: #3B8838;
+  color: #1b199c;
   position: relative;
   padding-bottom: 20px;
   margin: 0 0 20px;  
@@ -74,13 +74,13 @@ text-align:center;
   bottom: -5px;
   right: 0;
   width: 60px;
-  background: rgb(59, 136, 56);
+  background: rgb(26, 113, 184);
   /* border-radius: 50%; */
   margin: 0 auto;
   left: 0;
   right: 0;
   height: 6px;
-  border-bottom: 3px solid #C6FDC4;
+  border-bottom: 3px solid #0b0c55;
 }
 
 .btn {
