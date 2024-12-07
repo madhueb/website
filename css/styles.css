@@ -264,69 +264,49 @@ background: #FFF;
   }
 }
 
-#hero-banner{
+#hero-banner {
   overflow: hidden;
   height: 700px;
-  background: url('../images/banner/banner.jpg');
-  background-size:cover;
-  color:#fff;
+  background: #000; /* Fond noir */
+  color: #fff; /* Texte blanc */
+  display: flex; /* Utilisation de flexbox pour centrer */
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+  text-align: center; /* Texte centré */
 }
-#hero-banner.item {
-  height: 558px;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-}
-#hero-banner.banner-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #000;
-}
+
 #hero-banner h2 {
-  margin-top: 299px;
-  font-size: 39px;
-  line-height: 49px; 
+  font-size: 60px; /* Texte très grand */
+  line-height: 1.2; /* Espacement entre les lignes */
+  margin: 0; /* Pas d'espace supplémentaire */
+  color: #fff; /* Texte blanc */
+}
 
-  text-align: right;  
-  color: #000000;
-}
-#hero-banner h2 b{
-color: #FFFFFF;
-}
 #hero-banner p { 
-  font-size: 22px; 
-margin-bottom:20px;
-line-height:35px; 
+  font-size: 24px; /* Taille du texte secondaire */
+  margin: 20px 0; /* Espacement au-dessus et en dessous */
+  line-height: 1.5; /* Espacement entre les lignes */
+  color: #fff; /* Texte blanc */
+}
 
-  text-align: right;
-  color: #FFF;
+#hero-banner a {
+  margin-top: 20px; /* Espacement par rapport au paragraphe */
+  padding: 10px 20px; /* Dimensions du bouton */
+  background: transparent; /* Bouton transparent par défaut */
+  border: 2px solid #fff; /* Bord blanc */
+  color: #fff; /* Texte blanc */
+  text-transform: uppercase; /* Texte en majuscules */
+  font-weight: bold; /* Texte en gras */
+  text-decoration: none; /* Pas de soulignement */
+  transition: all 0.3s ease; /* Animation fluide */
 }
-#hero-banner a{
-width: 150px;
-margin: 0;
-display: block;
-background: transparent;
-border: 2px solid #fff;
-float: right;
+
+#hero-banner a:hover {
+  background: #fff; /* Fond blanc au survol */
+  color: #000; /* Texte noir au survol */
+  border: 2px solid #fff; /* Bord inchangé */
 }
-#hero-banner a:hover{
-text-align: center;
-width: 150px;
-margin: 0 auto;
-display: block;
-background: #71DE6C;
-border: 2px solid #71DE6C;
-color: #020202;
-}
-#hero-banner.banner-inner h2 > span {
-  color: #45aed6;
-}
-#hero-banner.banner-inner .btn {
-  margin-top: 10px;
-} 
+
  
 #hero-text {
   padding: 50px 0;
