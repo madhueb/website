@@ -169,120 +169,40 @@ text-transform: uppercase;
 /*************************
 *******Header******
 **************************/
-/* Rendre la barre de navigation transparente */
+/* Barre de navigation avec fond blanc */
 #main-nav.navbar-default {
-  background: transparent !important; /* Supprime le fond de la navbar */
+  background: #fff; /* Fond blanc */
   border: 0;
-  box-shadow: none; /* Supprime les ombres de la navbar */
+  box-shadow: none; /* Aucune ombre */
 }
 
-/* Liens de navigation actifs ou au survol */
-#main-nav.navbar-default .navbar-nav > li.active > a, 
-#main-nav.navbar-default .navbar-nav > li.open > a, 
-#main-nav.navbar-default .navbar-nav > li:hover > a {
-  background: rgb(48, 35, 222); /* Fond bleu sur survol ou état actif */
-  color: #FFFFFF; /* Texte blanc */
-}
-
-/* Retirer la bordure de la navbar */
-.navbar.navbar-default {
-  border: 0;
-  border-radius: 0;
-  margin-bottom: 0;
-}
-
-/* Espacement des icônes de la navbar */
-.navbar.navbar-default .navbar-toggle {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Personnalisation du logo (ou suppression si tu souhaites l'enlever) */
-.navbar.navbar-default .navbar-brand {
-  height: auto;
-  padding: 10px 15px 1px;
-  display: none; /* Masque le logo */
-}
-
-/* Couleur des liens au survol ou focus */
-.navbar-default .navbar-nav > li > a:hover, 
-.navbar-default .navbar-nav > li > a:focus {
-  color: #F8680D; /* Couleur orange au survol */
-  background: transparent; /* Pas de fond sur le survol */
-}
-
-/* Couleur de base des liens */
-.navbar-default .navbar-nav > li > a {
+/* Liens de navigation */
+#main-nav.navbar-default .navbar-nav > li > a {
   color: #020202; /* Couleur de texte par défaut */
+  padding: 15px 20px;
+  text-transform: uppercase; /* Optionnel : mettre les liens en majuscules */
+  font-weight: 500; /* Optionnel : renforcer le texte */
 }
 
-/* Rendre tout le fond de la navbar transparent */
-#main-nav.navbar-default {
-  background: transparent !important;
+/* Liens actifs et au survol (effet bleu) */
+#main-nav.navbar-default .navbar-nav > li.active > a, 
+#main-nav.navbar-default .navbar-nav > li:hover > a {
+  background: rgb(48, 35, 222); /* Fond bleu au survol */
+  color: #ffffff; /* Texte blanc */
 }
 
-
- 
-
-@media only screen and (min-width: 768px) {
-  #main-nav.navbar-default { 
-    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.26);
-  }
-  #main-nav.navbar-default .navbar-nav > li > a {
-    padding-top: 30px;
-    padding-bottom: 24px;
-  
-    border-bottom: 4px solid transparent;
+/* Masquer le logo */
+.navbar.navbar-default .navbar-brand {
+  display: none; /* Masquer le logo */
 }
-  .navbar-default .navbar-nav>li>a {
-	color: #0E0E0E;
-	}
-  #main-nav.navbar-default .navbar-nav > li.active > a,
 
-  #main-nav.navbar-default .navbar-nav > li.open > a,
-  #main-nav.navbar-default .navbar-nav > li:hover > a {
-    background: #3B8838; 
-	
-    color: #FFFFFF;
-  
-}
-  #main-nav.navbar-default .dropdown-menu {
-    padding: 0 20px;
-    min-width: 220px;
-    background-color: rgba(26, 28, 40, 0.9);
-    border: 0;
-    border-radius: 0;
+/* Retirer la bordure et l'ombre de la navbar sur les petits écrans */
+@media only screen and (max-width: 767px) {
+  #main-nav.navbar-default {
     box-shadow: none;
-    -webkit-box-shadow: none;
-    background-clip: inherit;
-  }
-  #main-nav.navbar-default .dropdown-menu > li {
-    border-left: 3px solid transparent;
-    margin-left: -20px;
-    padding-left: 17px;
-    -webit-transition: border-color 400ms;
-    transition: border-color 400ms;
-  }
-  #main-nav.navbar-default .dropdown-menu > li > a { 
-    padding: 15px 0;
-    color:#A8A8A8; 
-  }
-  #main-nav.navbar-default .dropdown-menu > li:first-child > a {
-    border-top: 0;
-  }
-  #main-nav.navbar-default .dropdown-menu > li.active,
-  #main-nav.navbar-default .dropdown-menu > li.open,
-  #main-nav.navbar-default .dropdown-menu > li:hover {
-    border-left-color: #45aed6;
-  }
-  #main-nav.navbar-default .dropdown-menu > li.active > a,
-  #main-nav.navbar-default .dropdown-menu > li.open > a,
-  #main-nav.navbar-default .dropdown-menu > li:hover > a {
-    color: #45aed6;
-    background-color: transparent;
   }
 }
+
 
 #hero-banner {
   overflow: hidden;
