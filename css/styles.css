@@ -9,8 +9,8 @@ body {
 
 /* Entête (header) */
 #header {
-    background-color: #333;
-    color: white;
+    background-color: #fff;
+    color: rgb(5, 10, 50);
     padding: 10px 0;
 }
 
@@ -74,6 +74,68 @@ body {
     font-size: 18px;
     color: #555;
 }
+
+/* Centrer le texte dans la section */
+#Introduction .wow {
+    text-align: center;
+}
+
+#Introduction .wow h3 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+#Introduction .wow p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* Section "Research Question : " */
+#RQ {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Section "Data Story : " */
+#data-story {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #555;
+}
+
 
 /* Animations */
 .wow {
