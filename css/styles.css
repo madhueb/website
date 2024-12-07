@@ -166,20 +166,21 @@ body {
     color: #555;
 }
 
-/* Sous-sections */
-.subsection {
-    height: 100vh;
-    padding: 60px 0;
-    background-color: white;
+.row {
+    margin-bottom: 30px; /* Espacement entre les lignes */
 }
 
-/* Titres des sous-sections */
 .subsection-title {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
 
 /* Animation de chaque sous-section */
 .subsection.wow {
