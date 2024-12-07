@@ -2,6 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -38,7 +39,7 @@ body {
 }
 
 #hero-banner {
-    height: 100vh;
+    height: 100%;
     background-color: #fff;
     color: rgb(35, 11, 100);
     display: flex;
@@ -62,7 +63,7 @@ body {
 /* Section "Introduction" */
 #Introduction {
     padding: 60px 0;
-    height: 100vh;
+    height: 100%;
     background-color: white;
 }
 
@@ -101,7 +102,7 @@ body {
 
 /* Section "Research Question : " */
 #RQ {
-    height: 100vh;
+    height: 100%;
     padding: 60px 0;
     background-color: white;
 }
@@ -235,7 +236,7 @@ p {
 /* Section "Team" */
 #team {
     padding: 60px 0;
-    height: 100vh;
+    height: 100%;
     background-color: #fff;
     clear: both;
 }
