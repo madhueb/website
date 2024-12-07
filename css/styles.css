@@ -145,7 +145,7 @@ body {
 
 /* Section "Data Story : " */
 #data-story {
-    height: 300vh;
+    height: 100%;
     padding: 60px 0;
     background-color: white;
     margin-bottom: 50px;
