@@ -150,7 +150,6 @@ body {
     height: 100vh;
     padding: 60px 0;
     background-color: white;
-    margin-bottom: 40px;
 }
 
 /* Titres des sous-sections */
@@ -198,6 +197,7 @@ body {
         transform: translateY(0);
     }
 }
+
 
 @keyframes fadeInRight {
     0% {
