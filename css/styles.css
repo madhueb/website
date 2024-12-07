@@ -140,6 +140,36 @@ body {
     color: #555;
 }
 
+/* Sous-sections */
+.subsection {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres des sous-sections */
+.subsection-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Animation de chaque sous-section */
+.subsection.wow {
+    visibility: hidden;
+}
+
+.subsection.wow.fadeInLeft, .subsection.wow.fadeInUp, .subsection.wow.fadeInRight {
+    animation-name: fadeInAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
 
 /* Animations */
 .wow {
