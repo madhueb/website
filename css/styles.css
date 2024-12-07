@@ -63,7 +63,7 @@ body {
 /* Section "Introduction" */
 #Introduction {
     padding: 60px 0;
-    height : auto;
+    height : 100vh;
     background-color: white;
 }
 
