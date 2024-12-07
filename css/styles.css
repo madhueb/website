@@ -234,7 +234,7 @@ body {
 #team {
     padding: 60px 0;
     height: 100vh;
-    background-color: white;
+    background-color: #fff;
 }
 .section-header {
     text-align: center;
@@ -259,6 +259,7 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
 }
 
 footer p {
