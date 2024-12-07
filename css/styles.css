@@ -211,7 +211,8 @@ body {
 
 /* Section "Team" */
 #team {
-    background-color: #f9f9f9;
+    height: 100vh;
+    background-color: #fff;
     padding: 60px 0;
 }
 
