@@ -13,7 +13,7 @@ body {
   font-weight: 400;
   color: #282828;
   line-height: 26px;
-  padding: 0;
+  margin: 0;
 }
 h1,
 h2,
@@ -169,39 +169,59 @@ text-transform: uppercase;
 /*************************
 *******Header******
 **************************/
+/* Rendre la barre de navigation transparente */
 #main-nav.navbar-default {
-background: #FFFFFF;
+  background: transparent !important; /* Supprime le fond de la navbar */
+  border: 0;
+  box-shadow: none; /* Supprime les ombres de la navbar */
 }
-#main-nav.navbar-default .navbar-nav > li.active > a, #main-nav.navbar-default .navbar-nav > li.open > a, #main-nav.navbar-default .navbar-nav > li:hover > a {
-background: rgb(59, 136, 56);
-color: #FFFFFF;
+
+/* Liens de navigation actifs ou au survol */
+#main-nav.navbar-default .navbar-nav > li.active > a, 
+#main-nav.navbar-default .navbar-nav > li.open > a, 
+#main-nav.navbar-default .navbar-nav > li:hover > a {
+  background: rgb(48, 35, 222); /* Fond bleu sur survol ou état actif */
+  color: #FFFFFF; /* Texte blanc */
 }
+
+/* Retirer la bordure de la navbar */
 .navbar.navbar-default {
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
 }
+
+/* Espacement des icônes de la navbar */
 .navbar.navbar-default .navbar-toggle {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+/* Personnalisation du logo (ou suppression si tu souhaites l'enlever) */
 .navbar.navbar-default .navbar-brand {
   height: auto;
   padding: 10px 15px 1px;
+  display: none; /* Masque le logo */
 }
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
-color: #F8680D;
- 
-background: transparent;
+
+/* Couleur des liens au survol ou focus */
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+  color: #F8680D; /* Couleur orange au survol */
+  background: transparent; /* Pas de fond sur le survol */
 }
-.navbar-default .navbar-nav>li>a{
-color: #020202;
-} 
+
+/* Couleur de base des liens */
+.navbar-default .navbar-nav > li > a {
+  color: #020202; /* Couleur de texte par défaut */
+}
+
+/* Rendre tout le fond de la navbar transparent */
 #main-nav.navbar-default {
-background: #FFF;
+  background: transparent !important;
 }
-.navbar-nav>li {
-}
+
+
  
 
 @media only screen and (min-width: 768px) {
@@ -266,7 +286,7 @@ background: #FFF;
 
 #hero-banner {
   overflow: hidden;
-  height: 700px;
+  height: 100vh;
   background: #000; /* Fond noir */
   color: #fff; /* Texte blanc */
   display: flex; /* Utilisation de flexbox pour centrer */
@@ -289,23 +309,7 @@ background: #FFF;
   color: #fff; /* Texte blanc */
 }
 
-#hero-banner a {
-  margin-top: 20px; /* Espacement par rapport au paragraphe */
-  padding: 10px 20px; /* Dimensions du bouton */
-  background: transparent; /* Bouton transparent par défaut */
-  border: 2px solid #fff; /* Bord blanc */
-  color: #fff; /* Texte blanc */
-  text-transform: uppercase; /* Texte en majuscules */
-  font-weight: bold; /* Texte en gras */
-  text-decoration: none; /* Pas de soulignement */
-  transition: all 0.3s ease; /* Animation fluide */
-}
 
-#hero-banner a:hover {
-  background: #fff; /* Fond blanc au survol */
-  color: #000; /* Texte noir au survol */
-  border: 2px solid #fff; /* Bord inchangé */
-}
 
  
 #hero-text {
