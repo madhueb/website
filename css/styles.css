@@ -49,6 +49,12 @@ body {
     padding: 0;                /* Annuler les padding pour le centre */
 }
 
+#hero-banner .banner-inner {
+    width: 100%;                /* Occuper toute la largeur de l'écran */
+    max-width: 1200px;          /* Limiter la largeur maximale pour un meilleur rendu */
+    padding: 20px;              /* Ajouter un peu de padding autour du contenu */
+}
+
 #hero-banner h2 {
     font-size: 48px;
     font-weight: bold;
