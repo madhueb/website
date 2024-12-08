@@ -136,60 +136,89 @@
                     <p>
                         In our analysis of the Wikispeedia dataset, we previously identified key "hubs" in the network. These hubs often correspond to culturally significant anchor points, reflecting the structure of modern knowledge. However, the prominence of an article as a hub does not necessarily indicate its alignment with areas of widely shared knowledge. Instead, to better understand the common knowledge shared among users, we must delve into the paths players take during their games.
                     </p>
-                    
+                    <br>
                     <p>
                         <strong>Do Players Exhibit Similar Navigation Behavior?</strong><br>
-                        To identify shared knowledge, it is essential to determine whether players demonstrate consistent behaviors when faced with the same game setup (i.e., starting and target articles). If players tend to follow similar trajectories, this suggests an underlying consensus or shared understanding of how knowledge is structured within Wikipedia.<br>
-                        To investigate this, we analyze how different players approach the same game (with the same starting point and target) and assess the degree of similarity in the path they take to navigate.
+                        To identify shared knowledge, it is essential to determine whether players demonstrate consistent behaviors when faced with the same game setup (i.e., starting and target articles). If players tend to follow similar trajectories, this suggests an underlying common knowledge share by the players.<br>
+                        To investigate this, we analyze how different players approach the same game ( same starting point and target) and assess the degree of similarity in the path they take to navigate.
                     </p>
             
                     <p>
-                        One way to do so is to look at the distance between paths taken by players for a given game. There are multiple ways to quantify the "distance" between paths: the Jacquard distance, shortest paths distance, or a semantic distance. Each metric provides a particular perspective on the nature of the similarity.
+                        One way to do so is to look at the distance between paths taken by players for a given game.There are multiple ways to quantify the "distance" between paths : the Jacquard distance, shortest paths distance or a semantic distance. Each metric provides a particular perspective on the nature of the similarity. 
+
                     </p>
             
                     <p>
                         Here as an example, we display the results for finished paths of the game starting at "Calculus" and reaching "Paul McCartney", using a semantic distance based on BERT embeddings.<br>
                     </p>
-
-                    <p>
-                        As shown in the graph, the paths are semantically close to one another, indicating that users exhibit similar navigation behaviors.
-                    </p>
             
                     <div style="display: flex; justify-content: flex-start; align-items: center; margin-left: 20vw; margin-right: 0;">
                         <iframe src="images/heatmap_distance.html" width="100%" height="650px" frameborder="0"></iframe>
                     </div>
-                    
-                    </div>                    
 
                     <p>
-                        Having established that users tend to follow similar patterns, we can further explore their navigation habits: which articles do they visit most frequently? Which categories do they explore? What links do they click on? Since players typically choose articles they are familiar with or have knowledge about in order to reach their target, analyzing these choices will provide valuable insights into shared knowledge.
-                    </p>
+                        The heatmap shows that the paths taken by different players are quite similar,for this game the mean distance between paths is 0.21. This means that two players tend to take semtically close paths, exhibiting similar navigation behaviors. <br>
+                        As we have established that users tend to follow similar patterns, we can now further explore their navigation habits.
             
                     <p>
                         <strong>What do the players' paths teach us about common knowledge?</strong><br>
-                        From all the players' paths in the data (finished and unfinished paths), we can have access to the top 10 most visited articles, top 10 most clicked links, and show how frequently each category is visited.<br>
-                        <strong>#Analysis</strong><br>
-                        Another interesting indicator is to look at the top 10 articles, categories, and links.<br>
-                        <strong>#Figures:</strong> top 10 articles, categories, links<br>
-                        Links of length 3 (?)
+                        
+                        To analyze players' navigation habits, key questions arise: which articles are visited most often? Which categories are explored? What links are clicked on the most? Since players tend to select articles they are familiar with or knowledgeable about to reach their target, examining these choices offers valuable insights into shared knowledge.<br>
+
+                        To address this, we identify the top 10 most visited articles, the most frequently clicked links, and the frequency of exploration for each category across all games.
+                    </p>
+
                     </p>
 
                     <div style="display: flex; justify-content: center; align-items: center;">
                         <iframe src="images/top_10_articles.html" width="100%%" height="600px" frameborder="0"></iframe>
                     </div>
 
+                    <p>
+                        The top 10 most visited articles align closely with the network’s major hubs, representing globally recognized topics. This suggests that players have a good knowledge of these concepts and their connections. Notably, only four categories are represented in the top 10, indicating areas where players feel most confident and knowledgeable.
+                    </p>
+
+                    
+                    
+
                     <div style="display: flex; justify-content: center; align-items: center;">
                         <iframe src="images/top_10_links_visites.html" width="80%" height="600px" frameborder="0"></iframe>
                     </div>
-            
 
+                    <p>
+                        The top 10 most clicked links highlight common associations widely understood by players. As with the most visited articles, these associations are predominantly related to geography and science.
+                        This reveals taxonomies that are commonly understood and recognized, such as biodiversity taxonomy (e.g., mammals being animals) and geographic taxonomy (e.g., the UK being part of Europe). These patterns reflect a shared understanding of fundamental classifications that guide players' navigation choices.
+                    </p>
+
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                                <iframe src="images/wordcloud_categories.png" width="80%" height="600px" frameborder="0"></iframe>
+                    </div>
+
+                    <p>
+                        The word cloud above illustrates the frequency of exploration for each category across all games, with the size of each category corresponding to the number of visits it received. Consistent with earlier findings, the most frequently visited categories are Science, Geography, Countries, and History, reflecting players' stronger knowledge in these areas. In contrast, less explored categories, such as Mathematics or Art, may indicate areas where players have comparatively less familiarity.
+                    </p>
+
+                    <p>
+                        To better understand whether players have knowledge of a particular category, it is useful to examine the success rate of games starting from a given category and reaching a target category. This can reveal how confident players are when navigating between different topics.
+                    </p>
 
                     <div style="display: flex; justify-content: center; align-items: center;">
                         <iframe src="images/success_rate_heatmap.html" width="80%" height="650px" frameborder="0"></iframe>
                     </div>
-            
+
                     <p>
-                        However, looking at unfinished paths in abandoned games can also be very meaningful in order to understand lack of knowledge. One very interesting aspect is to look at where the user stopped and how close they were to the target. We show in the following plots how close users were from the target in terms of semantic distance and in terms of number of clicks away.<br>
+                        The heatmap above illustrates players' confidence in navigating between different categories. Missing success rates occur due to insufficient data, with too few games played between certain category pairs. The heatmap confirms that players have strong knowledge of countries and geography, as indicated by higher success rates for games targeting articles related to these topics. Surprisingly, we also observe high success rates for certain category pairs, such as IT to Music or Mathematics to People. Additionally, games targeting Religion articles tend to show higher success rates, suggesting new common associations within players' knowledge.<br>
+                        These analyses offer valuable insights into players' shared knowledge, but it is also interesting to ask ourselves what players commonly do not know.
+
+                    </p>
+
+
+                    <p>
+                        <strong>What can we learn from unfinished paths?</strong><br>
+                        Analyzing successful paths offers valuable insights into shared knowledge, but studying unfinished paths can also uncover crucial information about knowledge gaps. By understanding where players stop and how close they are to the target, we can identify areas where their knowledge is lacking. For instance, players who stop near the target but without a strong semantic connection may not recognize the link between the two points, highlighting a gap in their knowledge.
+                    </p>
+                    <p>
+                        We show in the following plots how close users were from the target in terms of semantic distance and in terms of number of clicks away.<br>
                         Some of these unfinished games stop very close to the target (one click away or really semantically close); we could consider that these games stopped because players thought they had reached the target. However, some of these games, which are still pretty close to the end (two or three clicks away) and not so semantically close, provide evidence of some lack of knowledge: people may not be aware of what their stop point and their target point have in common.
                     </p>
             
