@@ -137,21 +137,21 @@
                     <h3 class="subsection-title">Hubs of wikispeedia</h3>
 			Let's begin with a quick introduction to the version of wikipedia in the wikispeedia game. The version containts 4604 articles, 
 			each article is categoriesed as belonging to one or more topics, see figure X for the distributions of topics on Wikipedia.
-			<div style="display: flex; justify-content: flex-end; align-items: center; margin-left: 20vw; margin-right: 0;">
+			<div style="display: flex; justify-content: flex-end; align-items: center; margin-left: 20px; margin-right: 0;">
 			    <iframe src="images/hubs_images/categories_histogram.html" width="70%" height="100px" frameborder="0"></iframe>
 			    <p style="margin-left: 20px;">Number of articles belonging to each category in the Wikispeedia version of Wikipedia.</p>
 			</div>
 			
 			We can see that the most common topics of articles are Science and Geography. The topic of an article is not neccesarily unique
 			one article can belong to several topics for example Wood which belongs to both the Science category and Design and Technology.<br>
-
+			<br>
 			So, what articles are hubs are on Wikipedia and which subjects do they belong to? To start answering this question let's have a look at some data.
 			For an article to be a hub it has to link to many other articles, and it is also important for the user to be able to navigate to that article, so 
 			let's have a look at the number of outgoing and incoming links to articles. We refer to the number of outgoing links as the source count
 			and the number of links to a specific article as the target count.
 
 			<div style="display: flex; justify-content: center; align-items: center;">
-                                <iframe src="images/hubs_images/combined_histograms.png" width="70%" height="500px" frameborder="0"></iframe>
+                                <iframe src="images/hubs_images/combined_histograms.png" width="70%" height="700px" frameborder="0"></iframe>
                     	</div>
 
 			From the plot over the distribution of the data we can see that there is an uneaven distribution of the number of links to and 
@@ -160,7 +160,7 @@
 			Some statistics, SUGGESTION INSERT TABLE<br>
 			Median value is 19 links, minimum 0 and max 294.<br>
 			<br>
-			SUGGESTION ADD SIMILAR PLOT TO VIKTOR SOURCE VS TARGET COUNT AND BE ABLE TO SORT BY SUBJECT<br>
+			SUGGESTION ADD SIMILAR PLOT TO VIKTOR SOURCE VS TARGET COUNT AND BE ABLE TO SORT BY SUBJECT<br><br>
 			
 
 			Hubs not only have to have many links to or from one article to others. They must also be well connected in the network to be able to navigate from one piece of information to another. How interconnected is the Wikipedia network? 
@@ -168,11 +168,11 @@
 			That means from any article to any other which it is possible to navigate to 9 is the maximum number of clicks you might have to take. 
 			Figure X shows a histogram over mean shortest path from articles to any other articles for which it is possible to navigate to. 
 			For this articles which are not connected to more than X other article will filtered out since their mean value is miss leading.
-			The median value, max min.. <br>
+			The median value, max min.. <br><br>
 			
-			Defining hubs... Using page rank, gives a continuous measure of hubness. <br>
+			Defining hubs... Using page rank, gives a continuous measure of hubness. <br><br>
 
-			CORRELATION MATRIX <br>
+			CORRELATION MATRIX <br><br>
 			
 			How to include category analysis? It feels relevant for common knowledge
                     <p>1st part: Hub analysis</p>
