@@ -17,7 +17,8 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico"> 
-</head> 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
 
 <body id="home">
     <header id="header">
@@ -181,6 +182,26 @@
                     <p>1st part: Hub analysis</p>
                 </div>
             </div>
+
+	<body>
+	    <div class="row wow fadeInLeft">
+	        <div class="col-md-12">
+	            <h3 class="subsection-title">Hubs of Wikispeedia</h3>
+	            <div id="markdown-content">
+	            </div>
+	        </div>
+	    </div>
+	    <script>
+	        document.addEventListener("DOMContentLoaded", function () {
+	            fetch('hubs.md')
+	                .then(response => response.text())
+	                .then(mdContent => {
+	                    document.getElementById('markdown-content').innerHTML = marked(mdContent);
+	                })
+	                .catch(err => console.error('Error loading Markdown file:', err));
+	        });
+	    </script>
+	</body>
     
             <!-- Row 2: User Navigation Pattern -->
             <div class="row wow fadeInUp">
