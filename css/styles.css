@@ -148,6 +148,12 @@ body {
     font-weight: bold;
 }
 
+.wrapper {
+  width:100%;
+  margin:0 auto;
+}
+
+
 
 /* Section "Data Story : " */
 #data-story {
