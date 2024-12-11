@@ -134,7 +134,7 @@
             <!-- Row 1: Hubs -->
             <div class="row wow fadeInLeft">
                 <div class="col-md-12">
-                    <h3 class="subsection-title">Hubs of wikispeedia</h3>
+                    <h3 class="subsection-title">Wikipedia in wikispeedia</h3>
 			Let's begin with a quick introduction to the version of wikipedia in the wikispeedia game. The version containts 4604 articles and 
 			if it is possible to navigate from one article to another the maximum distance is only 9 clicks away. That means from one article to any 
 			other which it is possible to navigate to 9 is the maximum number of clicks you might have to do to reach the target article. 
@@ -145,8 +145,12 @@
 			<div style="display: flex; justify-content: center; align-items: center;">
                                 <iframe src="images/hubs_images/categories_histogram.html" width="100%" height="300px" frameborder="0"></iframe>
                     	</div>
-			
-			So, what articles are hubs are on Wikipedia and which subjects do they belong to? To answer this question let's have a look at some data.
+		</div>
+            </div>
+	<div class="row wow fadeInLeft">
+		<div class="col-md-12">
+			<h3 class="subsection-title">Hubs</h3>
+			So, what articles are hubs are on Wikipedia? To answer this question let's have a look at some data.
 			For an article to be a hub it has to link to many other articles, and it is also important for the user to be able to navigate to that article, so 
 			let's have a look at the number of outgoing and incoming links to articles. We refer to the number of outgoing links as the source count
 			and the number of links to a specific article as the target count.
@@ -171,16 +175,26 @@
 			</table>
 			
 			Hubs not only have to have many links to or from one article to others. They must also be well connected in the network to be able to navigate 
-			from one piece of information to another. How interconnected are Wikipedia articles? To explore this data over the shortest path from one article 
-			to another is used and remeber the maximum path length is 9. Let's look at a histogram over the mean shortest path from articles to any other articles 
-			for which it is possible to navigate to. For this plot articles which have a mean shortest path lower than 1 is filtered out, since 
+			from one piece of information to another. How interconnected are the Wikipedia articles? To explore this data over the shortest path from one article 
+			to another is used and remeber the maximum path length is 9 if you are able to access an article. The histogram shows the mean shortest path from articles to any other articles 
+			for which it is possible to navigate to. <br><br>
+
+			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE) 
 			The median value, max min.. <br><br>
 			
-			So how to define a hub. To do this we are using the page rank algorithm, gives a continuous measure of hubness. <br><br>
+			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
+			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not<br><br>
+
+			SOME HUB RESULTS? <br><br>
 
 			CORRELATION MATRIX <br><br>
+			The page rank score is correlated with both the target count and the source count. It is negatively correlated with the ...
+			Captures the characteristics of a hub! <br><br>
+
+			Now that we have identifies the largest hubs on wikipedia how often are they used by players? <br><br>
+
+
 			
-			How to include category analysis? It feels relevant for common knowledge
                 </div>
             </div>
 
