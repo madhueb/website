@@ -135,8 +135,10 @@
             <div class="row wow fadeInLeft">
                 <div class="col-md-12">
                     <h3 class="subsection-title">Hubs of wikispeedia</h3>
-			Let's begin with a quick introduction to the version of wikipedia in the wikispeedia game. The version containts 4604 articles, 
-			each article is categoriesed as belonging to one or more topics. The figure below shows the distributions of topics on Wikipedia. 
+			Let's begin with a quick introduction to the version of wikipedia in the wikispeedia game. The version containts 4604 articles and 
+			if it is possible to navigate from one article to another the maximum distance is only 9 clicks away. That means from one article to any 
+			other which it is possible to navigate to 9 is the maximum number of clicks you might have to do to reach the target article. 
+			Each article is categoriesed as belonging to one or more topics. The figure below shows the distributions of topics on Wikipedia. 
 			The topic of an article is not neccesarily unique one article can belong to several topics for example Wood which belongs to both 
 			the Science category and Design and Technology. We can see that the most common topics of articles are Science and Geography. </p>
 
@@ -157,55 +159,28 @@
 			<table>
 			    <thead>
 			        <tr>
-			            <th></th>
-			            <th>Source Count</th>
-			            <th>Target Count</th>
+			            <th> </th> <th> Source Count </th> <th> Target Count </th>
 			        </tr>
 			    </thead>
 			    <tbody>
-			        <tr>
-			            <td>Min</td>
-			            <td>0</td>
-			            <td>0</td>
-			        </tr>
-			        <tr>
-			            <td>Median</td>
-			            <td>19</td>
-			            <td>8</td>
-			        </tr>
-			        <tr>
-			            <td>Max</td>
-			            <td>294</td>
-			            <td>1551</td>
-			        </tr>
-			        <tr>
-			            <td>Mean</td>
-			            <td>26.0</td>
-			            <td>26.0</td>
-			        </tr>
+			        <tr> <td> Min </td> <td> 0 </td> <td> 0 </td> </tr>
+			        <tr> <td> Median </td> <td> 19 </td> <td> 8 </td> </tr>
+			        <tr> <td> Max </td> <td> 294 </td> <td> 1551 </td> </tr>
+			        <tr> <td> Mean </td> <td> 26.0 </td> <td> 26.0 </td> </tr>
 			    </tbody>
 			</table>
-
-			<br>
-			Some statistics, SUGGESTION INSERT TABLE<br>
-			Median value is 19 links, minimum 0 and max 294.<br>
-			<br>
-			SUGGESTION ADD SIMILAR PLOT TO VIKTOR SOURCE VS TARGET COUNT AND BE ABLE TO SORT BY SUBJECT<br><br>
 			
-
-			Hubs not only have to have many links to or from one article to others. They must also be well connected in the network to be able to navigate from one piece of information to another. How interconnected is the Wikipedia network? 
-			Data over the shortest path from one article to another. If it is possible to navigate from one article to another the maximum distance is only 9 clicks away. 
-			That means from any article to any other which it is possible to navigate to 9 is the maximum number of clicks you might have to take. 
-			Figure X shows a histogram over mean shortest path from articles to any other articles for which it is possible to navigate to. 
-			For this articles which are not connected to more than X other article will filtered out since their mean value is miss leading.
+			Hubs not only have to have many links to or from one article to others. They must also be well connected in the network to be able to navigate 
+			from one piece of information to another. How interconnected are Wikipedia articles? To explore this data over the shortest path from one article 
+			to another is used and remeber the maximum path length is 9. Let's look at a histogram over the mean shortest path from articles to any other articles 
+			for which it is possible to navigate to. For this plot articles which have a mean shortest path lower than 1 is filtered out, since 
 			The median value, max min.. <br><br>
 			
-			Defining hubs... Using page rank, gives a continuous measure of hubness. <br><br>
+			So how to define a hub. To do this we are using the page rank algorithm, gives a continuous measure of hubness. <br><br>
 
 			CORRELATION MATRIX <br><br>
 			
 			How to include category analysis? It feels relevant for common knowledge
-                    <p>1st part: Hub analysis</p>
                 </div>
             </div>
 
