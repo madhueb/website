@@ -17,7 +17,6 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico"> 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body id="home">
@@ -137,29 +136,56 @@
                 <div class="col-md-12">
                     <h3 class="subsection-title">Hubs of wikispeedia</h3>
 			Let's begin with a quick introduction to the version of wikipedia in the wikispeedia game. The version containts 4604 articles, 
-			each article is categoriesed as belonging to one or more topics, see figure X for the distributions of topics on Wikipedia.
+			each article is categoriesed as belonging to one or more topics. The figure below shows the distributions of topics on Wikipedia. 
+			The topic of an article is not neccesarily unique one article can belong to several topics for example Wood which belongs to both 
+			the Science category and Design and Technology. We can see that the most common topics of articles are Science and Geography. </p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
                                 <iframe src="images/hubs_images/categories_histogram.html" width="100%" height="300px" frameborder="0"></iframe>
                     	</div>
-			 We can see that the most common topics of articles are Science and Geography. The topic of an article is not neccesarily unique
-			one article can belong to several topics for example Wood which belongs to both the Science category and Design and Technology.</p>
 			
-			So, what articles are hubs are on Wikipedia and which subjects do they belong to? To start answering this question let's have a look at some data.
+			So, what articles are hubs are on Wikipedia and which subjects do they belong to? To answer this question let's have a look at some data.
 			For an article to be a hub it has to link to many other articles, and it is also important for the user to be able to navigate to that article, so 
 			let's have a look at the number of outgoing and incoming links to articles. We refer to the number of outgoing links as the source count
 			and the number of links to a specific article as the target count.
 
 			<IMG SRC="images/hubs_images/combined_histograms.png"ALIGN=”center” />
 
-			<section>
-			<!-- Reference to .md file-->
-			{{ content }}
-			
-			</section>
+			From the plot we can see that there is an uneaven distribution of the number of links to and from articles. Most articles have very few links 
+			to them and some articles have a lot of links to them. Here are some statistics:
 
-			From the plot over the distribution of the data we can see that there is an uneaven distribution of the number of links to and 
-			from articles which is not suprising.<br>
+			<table>
+			    <thead>
+			        <tr>
+			            <th></th>
+			            <th>Source Count</th>
+			            <th>Target Count</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Min</td>
+			            <td>0</td>
+			            <td>0</td>
+			        </tr>
+			        <tr>
+			            <td>Median</td>
+			            <td>19</td>
+			            <td>8</td>
+			        </tr>
+			        <tr>
+			            <td>Max</td>
+			            <td>294</td>
+			            <td>1551</td>
+			        </tr>
+			        <tr>
+			            <td>Mean</td>
+			            <td>26.0</td>
+			            <td>26.0</td>
+			        </tr>
+			    </tbody>
+			</table>
+
 			<br>
 			Some statistics, SUGGESTION INSERT TABLE<br>
 			Median value is 19 links, minimum 0 and max 294.<br>
@@ -183,25 +209,6 @@
                 </div>
             </div>
 
-	<body>
-	    <div class="row wow fadeInLeft">
-	        <div class="col-md-12">
-	            <h3 class="subsection-title">Hubs of Wikispeedia</h3>
-	            <div id="markdown-content">
-	            </div>
-	        </div>
-	    </div>
-	    <script>
-	        document.addEventListener("DOMContentLoaded", function () {
-	            fetch('hubs.md')
-	                .then(response => response.text())
-	                .then(mdContent => {
-	                    document.getElementById('markdown-content').innerHTML = marked(mdContent);
-	                })
-	                .catch(err => console.error('Error loading Markdown file:', err));
-	        });
-	    </script>
-	</body>
     
             <!-- Row 2: User Navigation Pattern -->
             <div class="row wow fadeInUp">
