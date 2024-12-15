@@ -176,21 +176,28 @@
 			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE) 
 			The table below shows statistics for the source count, target count, and mean shortest path from an article to all articles it is connected to.
 			</p>
-			
-			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="450" height="150" />
 
+			<div style="display: flex; justify-content: center; align-items: center;">
+                                <IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="500" height="150" />
+                    	</div>
+			
 			<p>
 			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
 			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not. The histogram
 			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br><br>
 			</p>
 			
-			<IMG SRC="images/hubs_images/top_page_rank_articles.png"ALIGN=”center” width="600" height="500" />
+			<div style="display: flex; justify-content: center; align-items: center;">
+                                <IMG SRC="images/hubs_images/top_page_rank_articles.png"ALIGN=”center” width="650" height="500" />
+                    	</div>
+			
 			<p>
 			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. 
 			</p>
 
-			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="900" height="300" />
+			<div style="display: flex; justify-content: center; align-items: center;">
+                                <IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="900" height="300" />
+                    	</div>
 
 			<p>
 			The page rank score is correlated with both the target count and the source count.
@@ -199,8 +206,11 @@
 			This tells us the pagerank score captures the characteristics of a hub well!
 			Now that we have created a metric for the hubs on wikipedia what categories have the highest pagerank score?
 			</p>
+
+			<div style="display: flex; justify-content: center; align-items: center;">
+                                <IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent.png"ALIGN=”center” width="800" height="400" />
+                    	</div>
 			
-			<IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent.png"ALIGN=”center” width="800" height="400" />
 			<p>
 			How often are hubs used by players?
 			</p>
