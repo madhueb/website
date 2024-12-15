@@ -176,18 +176,28 @@
 			</body>
 			
 			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
-			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not<br><br>
+			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not. The histogram
+			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br><br>
 
-			SOME HUB RESULTS? <br><br>
+			<body>
+			<IMG SRC="images/hubs_images/top_page_rank_articles.png"ALIGN=”center” width="600" height="200" />
+			</body>
 
-			<IMG SRC="images/hubs_images/corr_pagerank.png"ALIGN=”center” width="600" height="300" />
-			<br><br>
-			The page rank score is correlated with both the target count and the source count. It is negatively correlated with the ...
-			Captures the characteristics of a hub! <br><br>
+			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. 
 
-			Now that we have identifies the largest hubs on wikipedia what categories have the highest pagerank score?
+			<body>
+			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="600" height="300" />
+			<body>
+			The page rank score is correlated with both the target count and the source count.
+			It is negatively correlated with the mean shortest path to the article and to other articles from a given article.
+			All correlations are significant using a p-value < 0.01. 
+			This tells us the pagerank score captures the characteristics of a hub well! <br><br>
 
-			<IMG SRC="images/hubs_images/target_count_hist.png"ALIGN=”center” />
+			Now that we have created a metric for the hubs on wikipedia what categories have the highest pagerank score?
+
+			<body>
+			<IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent.png"ALIGN=”center” width="600" height="300" />
+			<body>
 			
 			How often are hubs used by players? <br><br>
 
