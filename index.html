@@ -150,55 +150,55 @@
 	<div class="row wow fadeInLeft">
 		<div class="col-md-12">
 			<h3 class="subsection-title">Hubs</h3>
+			<p>
 			So, what articles are hubs are on Wikipedia? To answer this question let's have a look at some data.
 			For an article to be a hub it has to shorten the distance between articles in the wikipedia network, therefore
 			it is important that it links to many articles and has many links to it. So, let's have a look at the number 
 			of outgoing and incoming links to articles. We refer to the number of outgoing links as the source count
 			and the number of links to a specific article as the target count.
+			</p>
 
 			<IMG SRC="images/hubs_images/combined_histograms_links.png"ALIGN=”center” />
-
+			<p>
 			From the plot we can see that there is an uneaven distribution of the number of links to and from articles. Most articles have very few links 
 			to them and some articles have a lot of links to them. 
 			Hubs not only have to have many links to or from one article to others. They must also be well connected in the network to be able to navigate 
 			from one piece of information to another. How interconnected are the Wikipedia articles? To explore this data over the shortest path from one article 
 			to another is used and remeber the maximum path length is 9 if you are able to access an article. The histogram shows the mean shortest path from articles to any other articles 
 			for which it is possible to navigate to.
+			</p>
 
-			<body>
-			    <img src="images/hubs_images/mean_shortest_path_hist.png" alt="Histogram of shortest path">
-			</body>
-			<br><br>
+			<img src="images/hubs_images/mean_shortest_path_hist.png" alt="Histogram of shortest path">
+			
+			<p>
 			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE) 
 			The table below shows statistics for the source count, target count, and mean shortest path from an article to all articles it is connected to.
-			<br><br>
-			<body>
-			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="450" height="150" />
-			</body>
+			</p>
 			
+			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="450" height="150" />
+
+			<p>
 			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
 			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not. The histogram
 			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br><br>
-
-			<body>
-			<IMG SRC="images/hubs_images/top_page_rank_articles.png"ALIGN=”center” width="600" height="600" />
-			</body>
-
+			</p>
+			
+			<IMG SRC="images/hubs_images/top_page_rank_articles.png"ALIGN=”center” width="600" height="500" />
+			<p>
 			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. 
+			</p>
 
-			<body>
-			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="700" height="300" />
-			<body>
+			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="600" height="200" />
+
+			<p>
 			The page rank score is correlated with both the target count and the source count.
 			It is negatively correlated with the mean shortest path to the article and to other articles from a given article.
 			All correlations are significant using a p-value < 0.01. 
-			This tells us the pagerank score captures the characteristics of a hub well! <br><br>
-
+			This tells us the pagerank score captures the characteristics of a hub well!
 			Now that we have created a metric for the hubs on wikipedia what categories have the highest pagerank score?
-
-			<body>
-			<IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent.png"ALIGN=”center” width="600" height="300" />
-			<body>
+			</p>
+			
+			<IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent.png"ALIGN=”center” width="800" height="400" />
 			
 			How often are hubs used by players? <br><br>
 
