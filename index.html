@@ -188,7 +188,7 @@
 			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. 
 			</p>
 
-			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="600" height="200" />
+			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="900" height="300" />
 
 			<p>
 			The page rank score is correlated with both the target count and the source count.
@@ -199,8 +199,9 @@
 			</p>
 			
 			<IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent.png"ALIGN=”center” width="800" height="400" />
-			
-			How often are hubs used by players? <br><br>
+			<p>
+			How often are hubs used by players?
+			</p>
 
 
 			
@@ -210,11 +211,14 @@
     
             <!-- Row 2: User Navigation Pattern -->
             <div class="row wow fadeInUp">
-                <div class="col-md-12 text-center">
+                <div class="col-md-12">
                     <h3 class="subsection-title">User Navigation Pattern</h3>
                     
                     <p>
-                        In our analysis of the Wikispeedia dataset, we previously identified key "hubs" in the network. These hubs often correspond to culturally significant anchor points, reflecting the structure of modern knowledge. However, the prominence of an article as a hub does not necessarily indicate its alignment with areas of widely shared knowledge. Instead, to better understand the common knowledge shared among users, we must delve into the paths players take during their games.
+                        In our analysis of the Wikispeedia dataset, we previously identified key "hubs" in the network. 
+			These hubs often correspond to culturally significant anchor points, reflecting the structure of modern knowledge. 
+			    However, the prominence of an article as a hub does not necessarily indicate its alignment with areas of widely shared knowledge. 
+			    Instead, to better understand the common knowledge shared among users, we must delve into the paths players take during their games.
                     </p>
                     <br>
                     <p>
@@ -224,29 +228,41 @@
                     </p>
             
                     <p>
-                        One way to do so is to look at the distance between paths taken by players for a given game. There are multiple ways to quantify the "distance" between paths : the Jacquard distance, shortest paths distance or a semantic distance. Each metric provides a particular perspective on the nature of the similarity. 
+                        One way to do so is to look at the distance between paths taken by players for a given game. 
+			    There are multiple ways to quantify the "distance" between paths : the Jacquard distance, shortest paths distance or a semantic distance. 
+			    Each metric provides a particular perspective on the nature of the similarity. 
 
                     </p>
             
                     <p>
-                        Here, as an example, we present the results for completed paths in the game that start at "Calculus" and end at "Paul McCartney". This distance is the cosine distance, ranging from 0 to 2,between the embeddings of two different paths, calculated using a pretrained BERT model. It represents how semantically close two paths are. <br>
+                        Here, as an example, we present the results for completed paths in the game that start at "Calculus" and end at "Paul McCartney". 
+			    This distance is the cosine distance, ranging from 0 to 2,between the embeddings of two different paths, calculated using a pretrained 
+			    BERT model. It represents how semantically close two paths are. <br>
                     </p>
                     <div style="display: flex; justify-content: center; align-items: center;">
                         <iframe src="images/heatmap_distance.html" width="90%" height="500px" frameborder="0"></iframe>
                         <iframe src="images/mean_sim_distrib.html" width="90%" height="500px" frameborder="0"></iframe>
                     </div>
 
-                    <p>
-
-                        The heatmap reveals that the paths taken by different players are highly similar, with a mean semantic distance of 0.21 for this specific game. As the histogram demonstrates, this pattern holds true across all completed games in our dataset, showing a global mean distance of 0.15 between two finished paths for the same game. For comparison, we calculated the mean distance between two random paths (based on 100 randomly generated paths), which is significantly higher at 0.87. This indicates that players tend to follow semantically close paths, reflecting similar navigation behaviors.                        As we have established that users tend to follow similar patterns, we can now further explore their navigation habits.
+                    	<p>
+			The heatmap reveals that the paths taken by different players are highly similar, with a mean semantic distance of 0.21 
+			for this specific game. As the histogram demonstrates, this pattern holds true across all completed games in our dataset, 
+			showing a global mean distance of 0.15 between two finished paths for the same game. For comparison, we calculated the mean distance 
+			between two random paths (based on 100 randomly generated paths), which is significantly higher at 0.87. This indicates that players 
+			tend to follow semantically close paths, reflecting similar navigation behaviors.                        
+			As we have established that users tend to follow similar patterns, we can now further explore their navigation habits.
+			</p>
             
-                    <p>
+                    	<p>
                         <strong>What do the players' paths teach us about common knowledge?</strong><br>
-                        
-                        To analyze players' navigation habits, key questions arise: which articles are visited most often? Which categories are explored? What links are clicked on the most? Since players tend to select articles they are familiar with or knowledgeable about to reach their target, examining these choices offers valuable insights into shared knowledge.<br>
-
-                        To address this, we identify the top 10 most visited articles, the most frequently clicked links, and the frequency of exploration for each category across all games.
-                    </p>
+                        To analyze players' navigation habits, key questions arise: which articles are visited most often? 
+			Which categories are explored? What links are clicked on the most? Since players tend to select articles they are 
+			familiar with or knowledgeable about to reach their target, examining these choices offers valuable insights into shared 
+			knowledge.
+			<br>
+                        To address this, we identify the top 10 most visited articles, the most frequently clicked links, and the frequency of 
+			exploration for each category across all games.
+                    	</p>
 
                     </p>
 
@@ -255,7 +271,9 @@
                     </div>
 
                     <p>
-                        The top 10 most visited articles align closely with the network’s major hubs, representing globally recognized topics. This suggests that players have a good knowledge of these concepts and their connections. Notably, only four categories are represented in the top 10, indicating areas where players feel most confident and knowledgeable.
+                        The top 10 most visited articles align closely with the network’s major hubs, representing globally recognized topics. 
+			This suggests that players have a good knowledge of these concepts and their connections. Notably, only four categories are 
+			represented in the top 10, indicating areas where players feel most confident and knowledgeable.
                     </p>
 
                     
