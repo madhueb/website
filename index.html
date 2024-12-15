@@ -165,12 +165,15 @@
 			to another is used and remeber the maximum path length is 9 if you are able to access an article. The histogram shows the mean shortest path from articles to any other articles 
 			for which it is possible to navigate to.
 
-			<IMG SRC="images/hubs_images/mean_shortest_path_hist.png"ALIGN=”center” />
-			<br><br>
+			<body>
+			    <img src="images/hubs_images/mean_shortest_path_hist.png" alt="Histogram of shortest path">
+			</body>
+
 			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE) 
 			The table below shows statistics for the source count, target count, and mean shortest path from an article to all articles it is connected to.
-
-			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="400" height="200" />
+			<body>
+			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="600" height="200" />
+			</body>
 			
 			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
 			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not<br><br>
