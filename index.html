@@ -159,22 +159,7 @@
 			<IMG SRC="images/hubs_images/combined_histograms_links.png"ALIGN=”center” />
 
 			From the plot we can see that there is an uneaven distribution of the number of links to and from articles. Most articles have very few links 
-			to them and some articles have a lot of links to them. Here are some statistics:
-
-			<table>
-			    <thead>
-			        <tr>
-			            <th> </th> <th> Source Count </th> <th> Target Count </th>
-			        </tr>
-			    </thead>
-			    <tbody>
-			        <tr> <td> Min </td> <td> 0 </td> <td> 0 </td> </tr>
-			        <tr> <td> Median </td> <td> 19 </td> <td> 8 </td> </tr>
-			        <tr> <td> Max </td> <td> 294 </td> <td> 1551 </td> </tr>
-			        <tr> <td> Mean </td> <td> 26.0 </td> <td> 26.0 </td> </tr>
-			    </tbody>
-			</table>
-			
+			to them and some articles have a lot of links to them. 
 			Hubs not only have to have many links to or from one article to others. They must also be well connected in the network to be able to navigate 
 			from one piece of information to another. How interconnected are the Wikipedia articles? To explore this data over the shortest path from one article 
 			to another is used and remeber the maximum path length is 9 if you are able to access an article. The histogram shows the mean shortest path from articles to any other articles 
@@ -183,7 +168,9 @@
 			<IMG SRC="images/hubs_images/mean_shortest_path_hist.png"ALIGN=”center” />
 
 			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE) 
-			The median value, max min.. <br><br>
+			The table below shows statistics for the source count, target count, and mean shortest path from an article to all articles it is connected to.
+
+			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” />
 			
 			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
 			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not<br><br>
