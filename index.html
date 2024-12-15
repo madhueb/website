@@ -168,11 +168,12 @@
 			<body>
 			    <img src="images/hubs_images/mean_shortest_path_hist.png" alt="Histogram of shortest path">
 			</body>
-
+			<br><br>
 			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE) 
 			The table below shows statistics for the source count, target count, and mean shortest path from an article to all articles it is connected to.
+			<br><br>
 			<body>
-			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="600" height="200" />
+			<IMG SRC="images/hubs_images/table_stats.png"ALIGN=”center” width="450" height="150" />
 			</body>
 			
 			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
@@ -180,13 +181,13 @@
 			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br><br>
 
 			<body>
-			<IMG SRC="images/hubs_images/top_page_rank_articles.png"ALIGN=”center” width="600" height="200" />
+			<IMG SRC="images/hubs_images/top_page_rank_articles.png"ALIGN=”center” width="600" height="600" />
 			</body>
 
 			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. 
 
 			<body>
-			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="600" height="300" />
+			<IMG SRC="images/hubs_images/corr_figure.png"ALIGN=”center” width="700" height="300" />
 			<body>
 			The page rank score is correlated with both the target count and the source count.
 			It is negatively correlated with the mean shortest path to the article and to other articles from a given article.
