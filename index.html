@@ -136,11 +136,11 @@
                 <div class="col-md-12">
                     <h3 class="subsection-title">Wikipedia in wikispeedia</h3>
 			Let's begin with a quick introduction to the version of wikipedia in the wikispeedia game. The version containts 4604 articles and 
-			if it is possible to navigate from one article to another the maximum distance is only 9 clicks away. That means from one article to any 
+			if it is possible to navigate from one article to another the target article is maximum 9 clicks away. That means from one article to any 
 			other which it is possible to navigate to 9 is the maximum number of clicks you might have to do to reach the target article. 
-			Each article is categoriesed as belonging to one or more topics. The figure below shows the distributions of topics on Wikipedia. 
-			The topic of an article is not neccesarily unique one article can belong to several topics for example Wood which belongs to both 
-			the Science category and Design and Technology. We can see that the most common topics of articles are Science and Geography. </p>
+			Each article is categoriesed as belonging to one or more topics. The figure below shows the distributions of categories on Wikipedia. 
+			The category of an article is not neccesarily unique one article can belong to several topics for example Wood which belongs to both 
+			the Science and Design and Technology. We can see that the most common categories of articles are Science and Geography. </p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
                                 <iframe src="images/hubs_images/categories_histogram.html" width="80%" height="400px" frameborder="0"></iframe>
@@ -151,8 +151,9 @@
 		<div class="col-md-12">
 			<h3 class="subsection-title">Hubs</h3>
 			So, what articles are hubs are on Wikipedia? To answer this question let's have a look at some data.
-			For an article to be a hub it has to link to many other articles, and it is also important for the user to be able to navigate to that article, so 
-			let's have a look at the number of outgoing and incoming links to articles. We refer to the number of outgoing links as the source count
+			For an article to be a hub it has to shorten the distance between articles in the wikipedia network, therefore
+			it is important that it links to many articles and has many links to it. So, let's have a look at the number 
+			of outgoing and incoming links to articles. We refer to the number of outgoing links as the source count
 			and the number of links to a specific article as the target count.
 
 			<IMG SRC="images/hubs_images/combined_histograms_links.png"ALIGN=”center” />
