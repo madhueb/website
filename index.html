@@ -139,7 +139,7 @@
 			if it is possible to navigate from one article to another the target article is maximum 9 clicks away. That means from one article to any 
 			other which it is possible to navigate to 9 is the maximum number of clicks you might have to do to reach the target article. 
 			Each article is categoriesed as belonging to one or more topics. The figure below shows the distributions of categories on Wikipedia. 
-			The category of an article is not neccesarily unique one article can belong to several topics for example Wood which belongs to both 
+			The category of an article is not neccesarily unique as one article can belong to several topics for example Wood which belongs to both 
 			the Science and Design and Technology. We can see that the most common categories of articles are Science and Geography. </p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
@@ -182,9 +182,15 @@
                     	</div>
 			
 			<p>
-			So how to define a hub? To do this we are using the page rank algorithm. This gives a continuous measure of how important an article is by looking
-			at the number of links to that article and the quality of the link. Instead of simply defining an article as a hub or not. The histogram
+			So how to define a hub? To help us do this we decided on using the PageRank algorithm. This gives a continuous measure from 0 to 1 of how important an article is by looking
+			at the number of links to that article and the quality of the link. The "quality" of the link refers to how many incoming edges that node (article) has. 
+            Therefore, PageRank is an iterative algorithm to rank nodes in a graph network. The histogram
 			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br><br>
+
+            However, the traditional PageRank algorithm highly prioritizes incoming edges to a node, with little consideration given to number of outgoing edges. 
+            For our purposes, we need to consider both target and source count, to understand articles that are truly cornerstones within the Wikisppedia game. 
+            We therefore adjusted the PageRank algorithm to give equal weighting to nodes with a high number of incoming edges and nodes with a higher number of outoing edges.
+            The 'PageRank' value you will see in all charts below refers to this metric we created. 
 			</p>
 			
 			<div style="display: flex; justify-content: center; align-items: center;">
