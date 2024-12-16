@@ -98,8 +98,8 @@
                 <div class="research-questions">
                     <strong>Hubs</strong>
                     <ul>
+                        <li>What are the defining characteristics of a hub?</li>
                         <li>Which articles serve as the largest hubs on Wikispeedia, and how frequently are they used by players?</li>
-                        <li>How well do hubs facilitate movement through the network—do they lead to faster, more efficient paths to target articles?</li>
                         <li>What types of information are most often contained within hubs, and how are these hubs related to other articles or subject categories?</li>
                     </ul>
     
@@ -151,7 +151,7 @@
 		<div class="col-md-12">
 			<h3 class="subsection-title">Hubs</h3>
 			<p>
-			So, what articles are hubs are on Wikipedia? To answer this question let's have a look at some data.
+			To start defining hubs, let's have a look at some data.
 			For an article to be a hub it has to shorten the distance between articles in the wikipedia network, therefore
 			it is important that it links to many articles and has many links to it. So, let's have a look at the number 
 			of outgoing and incoming links to articles. We refer to the number of outgoing links as the source count
@@ -184,13 +184,13 @@
 			<p>
 			So how to define a hub? To help us do this we decided on using the PageRank algorithm. This gives a continuous measure from 0 to 1 of how important an article is by looking
 			at the number of links to that article and the quality of the link. The "quality" of the link refers to how many incoming edges that node (article) has. 
-            Therefore, PageRank is an iterative algorithm to rank nodes in a graph network. The histogram
-			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br><br>
+            Therefore, PageRank is an iterative algorithm to rank nodes in a graph network.  <br><br>
 
             However, the traditional PageRank algorithm highly prioritizes incoming edges to a node, with little consideration given to number of outgoing edges. 
-            For our purposes, we need to consider both target and source count, to understand articles that are truly cornerstones within the Wikisppedia game. 
+            For our purposes, we need to consider both target and source count, to understand articles that are truly cornerstones within the Wikispeedia game. 
             We therefore adjusted the PageRank algorithm to give equal weighting to nodes with a high number of incoming edges and nodes with a higher number of outoing edges.
-            The 'PageRank' value you will see in all charts below refers to this metric we created. 
+            The 'PageRank' value you will see in all charts below refers to this metric we created. The histogram
+			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br>
 			</p>
 			
 			<div style="display: flex; justify-content: center; align-items: center;">
