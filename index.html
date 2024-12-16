@@ -71,11 +71,11 @@
                 <p>Wikipedia the largest reference work ever created, an online encylopedia where articles are written collaboratively 
 			by users and anyone can contribute. Authors can add links to other pages on Wikipedia creating ways of navigating 
 			this network of information. This has been turned into a game, Wikispeedia. The game is simple, navigate from one 
-			article to another as quickly as possible. How to do this effectivly? Hubs are articles on Wikipedia that are linked 
-			to many other articles in the Wikipedia network. This makes them access points to get from one piece of information to 
-			another. By using data over navigation paths in the Wikispeedia game, we identify which articles are hubs on Wikipedia, 
-			explore how well users navigate to hubs and the gaps in players "common knowledge".  We aim to understand which subjects are 
-			most commonly used by players and how they navigate between them, and where knowledge gaps may exist. 
+			article to another as quickly as possible. How to do this effectivly? Hubs are articles on Wikipedia that are well connected 
+			in the Wikipedia network. This makes them access points to get from one piece of information to 
+			another. By using data over navigation paths and articles in the Wikispeedia game, we identify which articles are hubs on Wikipedia, 
+			explore how well users navigate to hubs and potential gaps in players "common knowledge".  We aim to understand which subjects are 
+			most commonly used by players and how they navigate between articles, and where knowledge gaps may exist. 
 		</p> 
 			
 		<!-- 
@@ -143,7 +143,7 @@
             <div class="row wow fadeInDown">
                 <div class="col-md-12">
                     <h3 class="subsection-title">Wikipedia in wikispeedia</h3>
-			Let's begin with a quick introduction to the version of wikipedia in the wikispeedia game. The version containts 4604 articles and 
+			Let's begin with a quick introduction to the version of Wikipedia in the Wikispeedia game. The version containts 4604 articles and 
 			if it is possible to navigate from one article to another the target article is maximum 9 clicks away. That means from one article to any 
 			other which it is possible to navigate to 9 is the maximum number of clicks you might have to do to reach the target article. 
 			Each article is categoriesed as belonging to one or more topics. The figure below shows the distributions of categories on Wikipedia. 
@@ -154,9 +154,6 @@
                                 <iframe src="images/hubs_images/categories_histogram.html" width="80%" height="400px" frameborder="0"></iframe>
                     	</div>
 
-			<div style="display: flex; justify-content: center; align-items: center;">
-                                <iframe src="images/hubs_images/network.html" width="80%" height="400px" frameborder="0"></iframe>
-                    	</div>
 		</div>
             </div>
 	<div class="row wow fadeInLeft">
@@ -185,7 +182,7 @@
                     	</div>
 			
 			<p>
-			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE) 
+			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE?) 
 			The table below shows statistics for the source count, target count, and mean shortest path from an article to all articles it is connected to.
 			</p>
 
@@ -194,14 +191,17 @@
                     	</div>
 			
 			<p>
+			From the statistics we can see that there are articles with no links from them this makes them dead ends. There are also articles with no links to them,
+			this means unless a player starts in this article they are unaccessible to the player. We can also see clearly that the distribution of number of links
+			on articles is more even, than the number of links to articles. This means that there are articles which are much more accessible to players than others.
 			So how to define a hub? To help us do this we decided on using the PageRank algorithm. This gives a continuous measure from 0 to 1 of how important an article is by looking
 			at the number of links to that article and the quality of the link. The "quality" of the link refers to how many incoming edges that node (article) has. 
-            Therefore, PageRank is an iterative algorithm to rank nodes in a graph network.  <br><br>
+           		Therefore, PageRank is an iterative algorithm to rank nodes in a graph network.  <br><br>
 
-            However, the traditional PageRank algorithm highly prioritizes incoming edges to a node, with little consideration given to number of outgoing edges. 
-            For our purposes, we need to consider both target and source count, to understand articles that are truly cornerstones within the Wikispeedia game. 
-            We therefore adjusted the PageRank algorithm to give equal weighting to nodes with a high number of incoming edges and nodes with a higher number of outoing edges.
-            The 'PageRank' value you will see in all charts below refers to this metric we created. The histogram
+           		However, the traditional PageRank algorithm highly prioritizes incoming edges to a node, with little consideration given to number of outgoing edges. 
+            		For our purposes, we need to consider both target and source count, to understand articles that are truly cornerstones within the Wikispeedia game. 
+            		We therefore adjusted the PageRank algorithm to give equal weighting to nodes with a high number of incoming edges and nodes with a higher number of outoing edges.
+            		The 'PageRank' value you will see in all charts below refers to this metric we created. The histogram
 			below shows the top 10 hubs using this metric. USA is the largest hub on Wikispeedia. <br>
 			</p>
 			
@@ -210,7 +210,9 @@
                     	</div>
 			
 			<p>
-			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. 
+			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. To do this
+			we look at the correlation between the variables Source Count, Target Count, Mean shortest path to articles from article
+			and the PageRank score.
 			</p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
@@ -218,8 +220,9 @@
                     	</div>
 
 			<p>
-			The page rank score is correlated with both the target count and the source count.
+			From the correlation matrix we see that the page rank score is correlated with both the target count and the source count.
 			It is negatively correlated with the mean shortest path to the article and to other articles from a given article.
+			This means that the higher the page rank score the lower is the mean shortest path.
 			All correlations are significant using a p-value < 0.01. 
 			This tells us the pagerank score captures the characteristics of a hub well!
 			Now that we have created a metric for the hubs on wikipedia what categories have the highest pagerank score?
@@ -232,6 +235,10 @@
 			<p>
 			How often are hubs used by players?
 			</p>
+
+			<div style="display: flex; justify-content: center; align-items: center;">
+                                <iframe src="images/hubs_images/network.html" width="80%" height="400px" frameborder="0"></iframe>
+                    	</div>
 
 
 			
