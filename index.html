@@ -68,7 +68,7 @@
     
             <div class="wow fadeInRight text-center">
                 <p>Wikipedia, the largest reference work ever created, is an online encyclopedia where anyone can 
-                    contribute collaboratively written articles. Its interconnected structure makes it an ideal platform 
+                    contribute to collaboratively written articles. Its interconnected structure makes it an ideal platform 
                     to study navigation and human associations through games like Wikispeedia 
                     (play <a href="https://dlab.epfl.ch/wikispeedia/play/">here</a>). In this game, players navigate
                     from one article to another using only hyperlinks, aiming to minimize the number of clicks. This project
@@ -109,7 +109,7 @@
                     <ul>
                         <li>What are the defining characteristics of a hub?</li>
                         <li>Which articles serve as the largest hubs on Wikispeedia, and how frequently are they used by players?</li>
-                        <li>What types of information are most often contained within hubs, and how are these hubs related to other articles or subject categories?</li>
+                        <li>What types of information are most often contained within hubs, and how are the hubs related to other articles or subject categories?</li>
                     </ul>
     
                     <strong>User Navigation Patterns</strong>
@@ -172,11 +172,12 @@
 			<IMG SRC="images/hubs_images/combined_histograms_links.png"ALIGN=”center” />
 			<p>
 			From the plot we can see that there is an uneaven distribution of the number of links to and from articles. Most articles have very few links 
-			to them and some articles have a lot of links to them. 
-			Hubs not only have to have many links to or from one article to others. They must also be well connected in the network to be able to navigate 
-			from one piece of information to another. How interconnected are the Wikipedia articles? To explore this data over the shortest path from one article 
-			to another is used and remeber the maximum path length is 9 if you are able to access an article. The histogram shows the mean shortest path from articles to any other articles 
-			for which it is possible to navigate to.
+			to them and some articles have a lot of links to them. The number of links on Wikipedia pages falls within a smaller range of values. This is unsurprising, 
+			as it indicates that the number of outgoing links from each Wikipedia article is more limited, while many articles tend to link to the same more central articles.
+			Hubs not only have to have many links to or from them. It is also important to be able to navigate to other articles effectivly, they must be well connected within the network 
+			to be able to navigate from one piece of information to another. To explore how interconnected an article is data over the shortest paths in the wikipedia network is used.
+			Remeber the maximum path distance is 9 if you are able to access an article from another. The histogram below illustrates the mean shortest path from articles to any other 
+			articles that can be navigated to. Additionally, it shows the distribution of the mean shortest path leading to each article.
 			</p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
@@ -184,8 +185,16 @@
                     	</div>
 			
 			<p>
-			For this plot some articles have a very low value however this is because they are only connected to a few articles. (SHOULD I FILTER OUT THESE?) 
-			The table below shows statistics for the source count, target count, and mean shortest path from an article to all articles it is connected to.
+			In the first plot we see that the distribution of mean shortest path to another article is much more evenly distributed and dense. 
+			We can see that there are some articles which are outliers and have a very short mean shortest path. However, this does not mean that 
+			they are more connected to other articles in the network since nan mean was used to calculate the mean shortest path. 
+			Therefore articles which are not connected to any other article will have a value close to 0.
+
+			The mean shortest path to a article is less dense and we can see that there are also some outliers. We can see that some articles 
+			have the value 0 for mean shortest path to them meaning these articles are in accessible to players unless they start from this 
+			article. 
+			The table below shows statistics for the variables source count, target count, mean shortest path from articles to articles it is connected to and
+			the mean shortest path leading to each article.
 			</p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
@@ -193,7 +202,8 @@
                     	</div>
 			
 			<p>
-			From the statistics we can see that there are articles with no links from them this makes them dead ends. There are also articles with no links to them,
+			From the statistics we can see that there are articles with no links from them this makes them dead ends in the Wikispeedia game. 
+			There are also articles with no links to them,
 			this means unless a player starts in this article they are unaccessible to the player. We can also see clearly that the distribution of number of links
 			on articles is more even, than the number of links to articles. This means that there are articles which are much more accessible to players than others.
 			So how to define a hub? To help us do this we decided on using the PageRank algorithm. This gives a continuous measure from 0 to 1 of how important an article is by looking
@@ -213,8 +223,8 @@
 			
 			<p>
 			As a sanity check let's see how well our metric captures the caracteristics of a hub previously described. To do this
-			we look at the correlation between the variables Source Count, Target Count, Mean shortest path to articles from article
-			and the PageRank score.
+			we look at the correlation between the variables Source Count, Target Count, Mean shortest path to articles from article,
+			mean shortest path leading to each article and the PageRank score.
 			</p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
