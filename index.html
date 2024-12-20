@@ -423,14 +423,28 @@
                     <h3 class="subsection-title">Hubs & User Navigation Pattern</h3>
 
                     <p>
-                        Now, let's analyse hubs and player navigation patterns. We aim to combine
-                        the two approaches and discuss the findings as a conclusion. We start by analysing the 
-                        article usage and then we go on to analysing the overlooked articles, while comparing both analysis 
-                        to our measure of 'hubness' - the page rank score.
+                        The analyses presented in the previous sections have provided valuable insights into user navigation patterns and the structure of the Wikispeedia network. In the first section, we identified hubs—central nodes that play a crucial role in the network’s topology—while the second section examined user navigation patterns. The findings from these parts suggest the presence of potential common knowledge or knowledge gaps, though their interpretation requires careful consideration. Specifically, while some of these results may reflect existing common knowledge, several factors—particularly the network structure and the prevalence of hubs—could also contribute to the observed patterns. In other words, the concentration of paths around hubs may limit users’ ability to explore diverse pathways, potentially leading to biased or hub-centered conclusions. In this third section, we aim to further investigate the following question: is it possible, despite these hub-centered dynamics, to identify genuine "knowledge" or knowledge gaps, or are the observed results primarily driven by the network structure and user behavior that favors hub-centered navigation?
                     </p>
+
                     <p>
-			In the following four plots we visualize an articles pagerank score against the
-                        total number of clicks it has recieved by the players. The goal is to see trends in what articles
+                        To try and answer this question, we first need to understand how bif of a role do hub play in the users games. To do so we can look at the percentage of time people visit hubs in their games along paths, and conmpare this to the percentage of time shortest paths go through hubs along the way. 
+                        This can be visualized in the following plot, note that in this approach we use a binary definition for hubs, where an article is considered a hub if it is in the top 10% of the hub score.
+                    </p>
+
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="images/hub_usage_plot.png" alt="Views_quadrant" style="height: 500px;">
+                    </div>
+
+                    <p>
+                        This plot reveals that in 50% of puzzles, the optimal strategy is to navigate to one of the top 10% most connected hubs with the first click. Most players tend to use these top hubs in their initial steps. Notably, successful players are more likely to utilize hubs within their first three steps compared to unsuccessful players, suggesting that early use of hubs improves navigation success. However, this observation introduces a potential bias to our previous results. While it may demonstrate that players are familiar with the topics associated with these top 10% hubs (e.g., well-known topics like "USA"), the reliance on hubs could obscure the true knowledge gaps. Articles that are highly visited may not necessarily be accessed because they are the most informative, but rather because they are hubs that are highly accessible and central to the network. 
+
+
+                    </p>
+
+
+                    <p>
+                        
+                        To try and overcome this bias we visualize articles pagerank score against the total number of clicks it has recieved by the players. The goal is to see trends in what articles
                         tends towards the different extremes i.e which articles with a high hub score are not used by players well and what non hubs are 
 			often used by players. Since how often players use articles also depends on how often a link is availible
 			to players, the y-axis has been normalised by the percentage of articles that has a link to
@@ -569,6 +583,10 @@
 
                     </p>
 
+                    <p>
+                        To validate or refute the findings on common knowledge, we have decided to gather external data by collecting the average monthly view counts of Wikipedia pages. The number of views reflects the popularity and visibility of specific topics, helping to identify which articles are frequently accessed not just because of their centrality in the network, but potentially due to their familiarity to users. By comparing these view counts with our previous results, we aim to determine if the observed results are evidence of common knowledge or if they are still influenced by other factors and can not lead to any conclusion yet. The following plot shows the mean monthly views accross the two quadrants of interest.
+                    </p>
+
 		<div style="display: flex; justify-content: center; align-items: center;">
     		<img src="images/views_per_quadrant.png" alt="Views_quadrant" style="width: 600px; height: 400px;">
 		</div>
@@ -577,33 +595,18 @@
                         Spearman correlation between the number of views and user frequency: 0.071 <br>
                         Spearman correlation between the number of views and PageRank score: 0.565 <br>
                         
-                        In this plot, we gathered external data on the average number of views per month
-                        on Wikipedia over the last 10 years for all articles. This data was then used to 
-                        calculate the average views of the largest outliers in the quadrants. <br></br>
-                        
-                        There appears to be a strong correlation between the quadrant in which an outlier 
-                        is placed and how often the corresponding article is viewed on Wikipedia. However, 
-                        the results may seem counterintuitive at first glance. A natural assumption would 
-                        be that articles reflecting common knowledge would have a higher frequency of visits. 
-                        The primary counterargument to this assumption is that the number of visits to an 
-                        article correlates more strongly with its PageRank score than with user frequency.
-                        
-                        As shown in earlier analyses, PageRank is correlated with the number of outgoing 
-                        links, which in turn reflects the size of the article. Therefore, a higher PageRank 
-                        does not necessarily indicate that the topic is more familiar to the general public. 
-                        Consequently, the total number of monthly visits is not a reliable indicator of what 
-                        constitutes common knowledge and should not be used as a sanity check for our analysis.
-                        
-                         <br></br>
+                        First we see from the spearman correlation factor that the number of views (hence common knowledge) doesn't seem to be correlated with the frequency of use by players. This supports what we said earlier as the frequency of use by players is influenced by many factors and can not be directly linked to common knowledge.
+
+                            The results of the plot are on first glance a bit counter intuitive, since the a normal assumption would be that articles that constitutes common knowledge more would have a higher rate of visits. Accross all categories only People and Music have a higher rate of visits in the upper left quadrant compared to the lower right quadrant. Some other categories like Geography or Countries have inverse results, which is surprising. 
+                            We can explain this by the fact that user frequency is really dependant of the type of games played by users, and in our dataset the games are not uniformly distributed, for example one game (Asteroid to Viking) makes up 20% of the games, so articles directly linked to these games will have a higher frequency of use. With a more uniform distribution of games we might see a different result.
+
+                            So we can conclude that on this data we can not base our conclusion for common knowledge only on the frequency of use by players and the hub score of the articles.
+                                                    
+                    <br></br>
                     
                         
                     <p>
-                        Another approach to understanding user navigation patterns is to examine how
-                        often players choose to bypass a more central article in favor of a less optimal one, 
-                        by comparing their hubness score. 
-                        We investigate cases where alternative choices have the same or 
-                        shorter shortest-path distance to the target, in order to reveal which articles are 
-                        frequently overlooked by players.
+                        A more accurate approach to determine common knowledge could be to examine how often players choose to bypass a more central article in favor of a less optimal one, by comparing their hubness score. We investigate cases where alternative choices have the same or shorter shortest-path distance to the target, in order to reveal which articles are frequently overlooked by players.
                     </p>
                     
                     <div style="display: flex; justify-content: center; align-items: center;">
@@ -638,38 +641,7 @@
                         time whereas 'George Byron, 6th Baron Byron' at a similar page rank score is merely overlooked 3.9% of the time.
                     </p>
                     
-                    <div style="display: flex; justify-content: center; align-items: center;">
-                        <img src="images/hub_usage_plot.png" alt="Views_quadrant" style="height: 500px;">
-                    </div>
-                    <p>
-                        When analyzing the usage of hubs along navigation paths, it becomes clear that top 
-                        hubs are used more frequently at the beginning of a path and less often as users 
-                        approach their target. This analysis considers up to ten steps in a player’s path 
-                        and displays the average occurrence of a top hub at each path position. The source 
-                        and target articles are excluded since they do not involve player choices. The longest
-                        shortest path has five path positions and thus three when excluding the source and target article.
-                        In 57% of puzzles, the optimal strategy involves selecting one of the top 10% most 
-                        connected hubs on the first move. Successful players tend to use these top hubs within 
-                        their first three steps more often than unsuccessful players. While this correlation 
-                        doesn't imply causation, it highlights navigation patterns between successful and 
-                        unsuccessful players.
-                    </p>
-                    <p>  
-
-                        In the end the knowlegde of players is a factor influencing the 
-                        players navigation strategies. Yet all knowledge helps a player reach their 
-                        wikispeedia target. A players strategies do not discern between very specific
-                        knowledge and common knowledge. It can be concluded that the influence of common knowledge cannot 
-                        be entirely seperated from other game strategies and behaviours. While common knowledge 
-                        is indicated, the extent extent of the common knowledge cannot be seperated.
-                        Furthermore, our analyses showed patterns in 
-                        player behavior such as a frequent reliance on high-connectivity hubs early in their 
-                        paths, which is especially true for successful players. It also shows the tendency of 
-                        players to frequently bypass the most central articles while navigating
-                        to the target, choosing a less-linked potentially more intuitive article as the next step.
-
-                </div>
-
+                    
 
             </div>
         </div>
