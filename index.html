@@ -549,10 +549,12 @@
 			say that it is also correlated to the size of the article. Lastly, a larger article does not indicate that the corresponding area is more well known by the general public. 
 			Hence, the data on the total amount of monthly visits is not a good represention of what constitutes common knowledge and should therefore not be used as a sanity check for
 			our analysis. <br></br>
+                    
+                        
                     <p>
                         Another approach to understanding user navigation patterns is to examine how
                         often players choose to bypass a more central article in favor of a less optimal one, 
-                        by comparing their PageRank score. 
+                        by comparing their hubness score. 
                         We investigate cases where alternative choices have the same or 
                         shorter shortest-path distance to the target, in order to reveal which articles are 
                         frequently overlooked by players.
@@ -567,63 +569,70 @@
                     </p> -->
                     
                     <div style="display: flex; justify-content: center; align-items: center;">
-			    <img src="images/DistributionBadChoices.png" alt="Views_quadrant" style="width: 600px; height: 400px;">
+                        <img src="images/DistributionBadChoices.png" alt="Views_quadrant" style="height: 500px;">
                     </div>
                     <p>
-                        The results show that users frequently deviate 
+                        As expected, users frequently deviate 
                         from the most central navigation path. A remarkable 41.9% of choices are optimal in this context.
                         Notably, some articles are overlooked more frequently 
-                        than others, suggesting that users are less likely to consider these articles during 
-                        navigation. Specifically, articles such as "Thomas Edison", "Nikola Tesla" and "Lyme Disease" 
-                        appear to be consistently neglected, potentially indicating a lower level of awareness 
-                        or recognition of these topics among players.
+                        than others, which poses the question if they are less known by the players. The following
+                        scatter plot seeks to answer this.
                     </p>
 
 
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <iframe src="images/html/hubscore_vs_forgone_updated.html" width="500px" height="500px" frameborder="0"></iframe>
+                        <iframe src="images/hubscore_vs_forgone.html" width="100%" height="650px" frameborder="0"></iframe>
                     </div>
 
                     <p>
-                        This plot shows that, the more central an article is the more predictable 
-                        is the rate at which it is ignored despite leading to the target quicker/ equally quickly 
-                        and with a higher hub score. This may be due to a higher occurance rate of 
-                        'hublike' articles. Nevertheless, while exploring the plot some peculiarities can be observed. 
-                        Some oddly specific articles are ignored a lot less than the majority, despite a similar hub score. 
-                        This could result from users being more aware of e. g. chemical elements, 
-                        than 'Lyme disease'. The article 'Lyme disease' is ignored 59% of the time, which is
-                        almost double compared to the article 'Rodium', despite a comparable hub score. 
-                        Notably most of the articles that are rarely forgone (below 5%) belong to the category Science.
-                        The second most present category in that group is Geography.
-                        This group of rarely forgone articles may be associated with general knowledge or widely studied topics. 
-                        they are more likely to be chosen during navigation. In contrast, more niche or 
-                        specialized articles, like those related to diseases or obscure topics, are often 
-                        overlooked, even when they provide efficient paths. </br>
+                        This plot shows that the more central (higher PageRank) an article is, the more likely 
+                        it is to be skipped (with a higher share of being overlooked), even when these articles could lead to 
+                        the target just as quickly or faster while being more central to the wikispeedia network 
+                        (according to their distance to the target article and their page rank score). 
+                        This trend may be due to articles rarely linking to only one hub-like article, 
+                        but instead linking to multiple and forcing a choice where the player is unaware of the 
+                        exact page rank scores.
+
+                        However, certain patterns emerge when comparing articles with a similar page rank score. 
+                        The category countries appears to be generally overlooked less than geography and both less than
+                        science. However this metric still does not help in identifying common knowledge, as can be shown
+                        with the examplary article 'Wasp' at a page rank score of 0.000092 is overlooked 24.3% of the 
+                        time whereas 'George Byron, 6th Baron Byron' at a similar page rank score is merely overlooked 3.9% of the time.
                     </p>
                     
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <iframe src="images/Hubs_positions.png" width="100%" height="650px" frameborder="0"></iframe>
+                        <img src="images/hub_usage_plot.png" alt="Views_quadrant" style="height: 500px;">
                     </div>
                     <p>
                         When analyzing the usage of hubs along navigation paths, it becomes clear that top 
                         hubs are used more frequently at the beginning of a path and less often as users 
-                        approach their target. In 57% of puzzles, the optimal strategy involves clicking 
-                        one of the top 10% most connected hubs on the first move. Most players inherently 
-                        use these hubs more than that in their initial steps.
-                        Notably, successful players use top hubs within 
-                        their first three steps more frequently than unsuccessful players, however, 
-                        this correlation does not allow for causation. It merely visualizes the overall navigation 
-                        behaviour of players.
+                        approach their target. This analysis considers up to ten steps in a player’s path 
+                        and displays the average occurrence of a top hub at each path position. The source 
+                        and target articles are excluded since they do not involve player choices. The longest
+                        shortest path has five path positions and thus three when excluding the source and target article.
+                        In 57% of puzzles, the optimal strategy involves selecting one of the top 10% most 
+                        connected hubs on the first move. Successful players tend to use these top hubs within 
+                        their first three steps more often than unsuccessful players. While this correlation 
+                        doesn't imply causation, it highlights navigation patterns between successful and 
+                        unsuccessful players.
                     </p>
-                    <!-- <p> 
-                        In conclusion, the analysis of hubs and user navigation patterns provides indications
-                        of shared knowledge and common navigation behaviors. By examining the paths players take, 
-                        the articles they visit most frequently, and the categories they explore, we gain a deeper 
-                        understanding of the collective knowledge landscape. Additionally, the investigation of 
-                        bypassed articles provides insights into the choices players make during navigation, 
-                        highlighting topics that are consistently overlooked. These findings offer valuable 
-                        insights into the common knowledge shared by players and the navigation strategies they employ. -->
+                    <p>  
+
+                        In the end the knowlegde of players is a factor influencing the 
+                        players navigation strategies. Yet all knowledge helps a player reach their 
+                        wikispeedia target. A players strategies do not discern between very specific
+                        knowledge and common knowledge. It can be concluded that the influence of common knowledge cannot 
+                        be entirely seperated from other game strategies and behaviours. While common knowledge 
+                        is indicated, the extent extent of the common knowledge cannot be seperated.
+                        Furthermore, our analyses showed patterns in 
+                        player behavior such as a frequent reliance on high-connectivity hubs early in their 
+                        paths, which is especially true for successful players. It also shows the tendency of 
+                        players to frequently bypass the most central articles while navigating
+                        to the target, choosing a less-linked potentially more intuitive article as the next step.
+
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -651,7 +660,10 @@
         <div class="container">
             <div class="section-header text-center">
                 <h2 class="section-title wow fadeInDown">Team</h2>
-                <p class="wow fadeInDown">Team</p>
+                <p class="wow fadeInDown">Credits for this work go to:</br>
+                Madeleine Hueber, Michelle Erin Odnert, Lisa Anna Charlotta Vind, Viktor Axel Stefan Svalstedt, Antoine Dávid</br>
+
+                </p>
             </div>
         </div>
     </section>
