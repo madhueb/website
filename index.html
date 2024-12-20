@@ -372,7 +372,7 @@
                     </div>
 
                     <p>
-                        The word cloud above visualizes the frequency of exploration for each category across all games, with the size of each category proportional to the number of visits it received, normalized by the number of articles within that category. Consistent with earlier observations, the most frequently explored categories are Science, Geography, Countries, and History, highlighting players' stronger knowledge in these domains.Additionally, Everyday Life appears to be another category that players tend to visit more often. In contrast, less visited categories like Mathematics or Art may point to areas where players might have comparatively less familiarity.  </p>
+                        The word cloud above visualizes the frequency of exploration for each category across all games, with the size of each category proportional to the number of visits it received, normalized by the number of articles within that category. Consistent with earlier observations, the most frequently explored categories are Science, Geography, Countries, and History, highlighting players' stronger knowledge in these domains.Additionally, Everyday Life appears to be another category that players tend to visit more often. In contrast, less visited categories like Mathematics or Art may point to areas where players might have comparatively less familiarity. This wordcloud aligns with the distribution of categories across articles of Wikispeedia, shown earlier, which seems logic.  </p>
 
                     <p>
                         To better understand whether players have knowledge of a particular category, it is useful to examine the success rate of games starting from a given category and reaching a target category. This can reveal how confident players are when navigating between different topics.
@@ -383,7 +383,7 @@
                     </div>
 
                     <p>
-                        The heatmap above illustrates players' confidence in navigating between different categories. Missing success rates occur due to insufficient data, with too few games played between certain category pairs. The heatmap confirms that players have strong knowledge of countries and geography, as indicated by higher success rates for games targeting articles related to these topics. Surprisingly, we also observe high success rates for certain category pairs, such as IT to Music or Mathematics to People. Additionally, games targeting Religion articles tend to show higher success rates, suggesting new common associations within players' knowledge.<br>
+                        The heatmap above illustrates players' confidence in navigating between different categories. Missing success rates occur due to insufficient data, with too few games played between certain category pairs (less than 5). The heatmap confirms that players have strong knowledge of countries and geography, as indicated by higher success rates for games targeting articles related to these topics. Surprisingly, we also observe high success rates for certain category pairs, such as IT to Music or Mathematics to People. Additionally, games targeting Religion articles tend to show higher success rates, suggesting new common associations within players' knowledge.<br>
                         These analyses offer valuable insights into players' shared knowledge, but it is also interesting to ask ourselves what players commonly do not know.
 
                     </p>
@@ -651,8 +651,14 @@
                         with the examplary article 'Wasp' at a page rank score of 0.000092 is overlooked 24.3% of the 
                         time whereas 'George Byron, 6th Baron Byron' at a similar page rank score is merely overlooked 3.9% of the time.
                     </p>
+
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="images/views_forgone.png" alt="Views_quadrant" style="height: 500px;">
+                    </div>
+                    <p>
                     
-                    
+                    For almost all categories we see that the top 10 overlooked articles have very low monthly views, which could indicate that these articles are not common knowledge. The only exception are countries and IT. This could be explained by the fact that the 2 categories are subjects of global relevance, appealing to a broad audience, regardless of age, nationality, or background. Countries are hubs, they connect to almost everything and are a main figure in news, current affairs and have a strong connection to culture. IT is, in this day and age, connected to everyone. It also circulates the news a lot through the rapdily evolving industry, also with a lot of interest in emerging trends such as AI and quantom computing.
+                    </p>
 
             </div>
         </div>
@@ -665,13 +671,9 @@
             </div>
     
             <div class="wow fadeInRight text-center">
-                <p>In conclusion, the analysis of hubs and user navigation patterns provides indications
-                        of shared knowledge and common navigation behaviors. By examining the paths players take, 
-                        the articles they visit most frequently, and the categories they explore, we gain a deeper 
-                        understanding of the collective knowledge landscape. Additionally, the investigation of 
-                        bypassed articles provides insights into the choices players make during navigation, 
-                        highlighting topics that are consistently overlooked. These findings offer valuable 
-                        insights into the common knowledge shared by players and the navigation strategies they employ.
+                <p>The analysis of hubs and user navigation patterns provides indications of shared knowledge and common navigation behaviors of players. Where hubs play a central role in influencing players paths to target articles. However, establishing connections between these patterns and underlying "knowledge" remains a complicated challenge. A couple of methods to extract conclusions are presented, all of which shows trends in the data that, on an intuitive level, supports the methods to some extent. Nevertheless, despite these trends, the trends are also accompanied by counter-evidence, especially related to the category "Countries", a category with high concentration of hubs.
+
+                    Therefore, while the observed trends suggest potential indicators of common knowledge and knowledge gaps, the complexity of the data, formed by factors such as in-game strategies and skewed distribution of game types, limits the ability to draw out any further and stronger conclusions.
 		</p> 
             </div>
         </div>
