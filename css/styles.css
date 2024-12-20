@@ -56,7 +56,7 @@ body {
 }
 .globe-container {
     margin: 20px auto; /* Ajout d'espacement autour de l'animation */
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 #hero-banner h2 {
