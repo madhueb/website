@@ -237,14 +237,27 @@
 			This means that the higher the page rank score the lower is the mean shortest path.
 			All correlations are significant using a p-value < 0.01. 
 			This tells us the pagerank score captures the characteristics of a hub well!
-			Now that we have created a metric for the hubs on wikipedia what categories have the highest pagerank score?
+			Now that we have created a metric for the hubs on wikipedia what categories have the highest pagerank score? The barplot
+			below is plotted according to the number of articles in each category on Wikipedia.
 			</p>
 
 			<div style="display: flex; justify-content: center; align-items: center;">
-                                <IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent.png"ALIGN=”center” width="800" height="400" />
+                                <IMG SRC="images/hubs_images/sum_pagerank_hub_score_barchart.png"ALIGN=”center” width="800" height="400" />
+                    	</div>
+
+			<p>
+			Interestingly, we can see that the category with the highest PageRank score is Geography then Countries followed 
+			by Science. This is interesting as this is different from the number of articles in each of these categories. 
+			To get a better understanding of the page rank score we now have a look at the score normalized by the number of articles in each category.
+			</p>
+
+			<div style="display: flex; justify-content: center; align-items: center;">
+                                <IMG SRC="images/hubs_images/sum_pagerank_hub_score_percent_barchart.png"ALIGN=”center” width="800" height="400" />
                     	</div>
 			
 			<p>
+			From looking at the average PageRank score by category we can see that countries has the high value, which makes sense as of the top 
+			10 articles with the highest hubscore countries make up 5 of these indicating that countries have high scores.
 			Zooming back out, lets look at the graph network visualized in space.
 			</p>
 
