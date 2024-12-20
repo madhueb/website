@@ -54,8 +54,13 @@ body {
     max-width: 1200px;          /* Limiter la largeur maximale pour un meilleur rendu */
     padding: 20px;              /* Ajouter un peu de padding autour du contenu */
 }
-.globe-container {
+.globe-container iframe{
     margin: 20px auto; /* Ajout d'espacement autour de l'animation */
+    position: absolute;
+    bottom: 0; /* Décale vers le bas */
+    right: 0; /* Décale vers la droite */
+    transform: translate(50%, 50%); /* Pour corriger l'offset du cadre */
+
 }
 
 #hero-banner h2 {
